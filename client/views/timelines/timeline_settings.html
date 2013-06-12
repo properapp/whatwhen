@@ -1,0 +1,24 @@
+<template name="timelineSettings">
+  
+  <section class="timeline-settings">
+    <div class="form-row half-page-form timeline-name">
+      <div class="fieldset short">
+        <label for="timeline-name">Timeline Name</label>
+        <input type="text" onClick="this.select();" class="timeline-name" value="{{timeline.name}}" placeholder="A good name for this...">
+        <p class="helper">Press 'Enter' to Save</p>
+      </div>
+      <div class="fieldset short">
+        <label for="timeline-for">Who (or what) is it for?</label>
+        <input type="text" onClick="this.select();" class="timeline-for" value="{{timeline.for}}" placeholder="Who's it for (optional)?">
+        <p class="helper">Press 'Enter' to Save</p>
+      </div>
+    </div>
+    <div class="timeline-options">
+      <a onclick="window.open(this.href,'_blank');return false;" class="btn black inline" href="/timelines/{{timeline._id}}/view">View It</a>
+      <a href="#" class="btn black inline email-timeline">Email It</a>
+      <span class="or">or</span>
+      <a href="#" class="plain-link delete">Delete It</a>
+    </div>
+  </section> <!-- end .timeline-settings -->
+  
+</template>

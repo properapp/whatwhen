@@ -1,0 +1,65 @@
+<template name="emailModal">
+  
+  <div class="modal email-modal">
+    <header class="modal-header">
+      <h6>Send Timeline</h6>
+      <div class="close-modal"><i class="ss-icon ss-delete"></i></div>
+    </header>
+    <div class="modal-body">
+      <form action="#" id="send-timeline-recipients">
+        <div class="form-row">
+          <label>Add some recipients for this timeline...</label>
+          <div class="fieldset recipient-first-name">
+            <input type="text" name="recipientFirstName" class="recipientFirstName" placeholder="First Name">
+          </div>
+          <div class="fieldset recipient-email">
+            <input type="text" name="recipientEmail" class="recipientEmail" placeholder="Email Address">
+          </div>
+          <div class="fieldset add-recipient">
+            <button type="submit" class="btn black add-recipient-btn">Add Recipient</button>
+          </div>
+        </div>
+      </form>
+      {{#if hasRecipients}}
+      <div class="recipients-list">
+        <table>
+          <thead>
+            <tr>
+              <th class="text-left" width="25%">First Name</th>
+              <th class="text-left" width="70%">Email Address</th>
+              <th width="5%"></th>
+            </tr>
+          </thead>
+          <tbody>
+            {{#each recipients}}
+              {{>recipient}}
+            {{/each}}
+          </tbody>
+        </table>
+        <a href="#" class="btn black send-timeline">Send Timeline to Recipients</a>
+      </div>
+      {{else}}
+        <div class="blank-state compact no-recipients">
+          <h3>No recipients yet, buddy.</h3>
+          <p class="bs-subtitle">Add some recipients to send your timeline to up top.</p>
+        </div>
+      {{/if}}
+      <div class="recipients-success" style="display: none;">
+        <div class="blank-state compact">
+          <i class="ss-icon ss-mailbox" style="display: inline-block; font-size: 3em; margin-bottom: 15px; color: limegreen;"></i>
+          <h5>Awesome!</h5>
+          <p class="bs-subtitle">All recipients have been notified successfully.</p>
+        </div>        
+      </div>
+    </div>
+  </div> <!-- end .modal -->
+  
+</template>
+
+<template name="recipient">
+  <tr>
+    <td>{{firstName}}</td>
+    <td>{{email}}</td>
+    <td class="text-right"><i class="ss-icon ss-delete delete-recipient"></i></td>
+  </tr>
+</template>

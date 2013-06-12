@@ -1,0 +1,60 @@
+.timeline-settings {
+  @include clearfix; 
+  border-bottom: 1px solid #eee;
+  padding-bottom: 28px;
+  margin-bottom: 40px;
+  
+  .half-page-form {
+    margin-bottom: 0px;
+  }
+  
+  .timeline-name {
+    float: left;
+    position: relative;
+  }
+  
+  .timeline-options {
+    float: right;
+    margin-top: 15px;
+    
+    .or { margin: 0 10px; }
+  }
+  
+} /* .timeline-settings */
+
+.fieldset {
+  position: relative;
+}
+
+.helper {
+  text-align: center;
+  color: #888;
+  display: none;
+  position: absolute;
+  top: 100%;
+  
+  &.typing {
+    display: block;
+  }
+  
+}
+
+input.timeline-name, input.timeline-for {
+  @include box-shadow(0 0 0 transparent);
+  font-size: 1.25em;
+  line-height: 1.5em;
+  padding: 0px 0 9px;
+  margin-top: -2px;
+  border: 1px solid transparent;
+  color: #333;
+  
+  &:hover, &:focus {
+    border: 1px solid #ccc;
+    @include box-shadow(rgba(0,0,0,0.1) 0 1px 1px inset);
+    font-size: 0.875em;
+    padding: 8px 10px;
+    margin-top: 0px;
+    color: #000;
+  }
+  
+}

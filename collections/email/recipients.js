@@ -1,0 +1,1 @@
+Recipients = new Meteor.Collection(null);

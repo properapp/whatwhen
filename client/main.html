@@ -1,0 +1,44 @@
+<head>
+  <title>What When - Tidy timelines for freelancers.</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+      var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-41469906-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+  </script>
+</head>
+
+<body>
+  
+  {{#if isHome}}  
+  <div class="heads-up">
+    <div class="container">
+      <p class="text-center">Need more than just timelines? <a href="http://properapp.com" target="_blank">Check out Proper</a>, a better way to manage client expectations.</p>
+    </div>
+  </div>
+  {{/if}}
+
+  <div class="wrapper">
+  
+    {{>modals}}
+  
+    <div class="container">
+      {{> header}}
+      <div id="page-content">{{renderPage}}</div> 
+    </div>
+    
+    <div class="push"></div>
+    
+  </div> <!-- end .wrapper -->
+  
+  {{#if isNotPublic}}
+    {{>footer}}
+  {{/if}}
+  
+</body>

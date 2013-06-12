@@ -1,0 +1,23 @@
+table {
+  width: 100%;
+  
+  thead tr th {
+    color: #888;
+  }
+  
+  tbody tr td {
+    padding: 10px 0;
+    vertical-align: middle;
+    width: auto;
+    
+    &.top-align {
+      vertical-align: top;
+    }
+    
+  }
+  
+  tbody tr {
+    border-bottom: 1px solid #eee;
+  }
+  
+}

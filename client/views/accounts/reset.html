@@ -1,0 +1,47 @@
+<template name="passwordReset">
+
+    <fieldset class="half-page-form">
+      
+    <form id="reset-password" action="#">
+
+      <div class="form-row">
+        <div class="fieldset long">
+          <label for="email-address">Email Address</label>
+          <input type="text" name="emailAddress" placeholder="joe@smith.com">
+        </div>
+      </div> <!-- end .form-row -->    
+      
+      <button type="submit" class="btn black">Request Password Reset</button>
+
+    </form> <!-- end #signup -->
+    
+    <div class="blank-state compact reset-sent" style="display: none;">
+      <i class="ss-icon ss-mailbox" style="display: inline-block; font-size: 3em; margin-bottom: 15px; color: limegreen;"></i>
+      <h3>Reset Sent.</h3>
+      <p class="bs-subtitle">Check your email for a link to reset your password.</p>
+    </div>
+  
+  </fieldset> <!-- end .half-page-forn -->
+  
+</template>
+
+<template name="passwordResetForm">
+  
+  <fieldset class="half-page-form">
+      
+    <form id="password-reset" action="#">
+
+      <div class="form-row">
+        <div class="fieldset long">
+          <label for="newPassword">New Password</label>
+          <input type="password" name="newPassword" class="new-password" placeholder="Something secret, at least six (6) characters.">
+        </div>
+      </div> <!-- end .form-row -->    
+      
+      <button type="submit" class="btn black">Reset Password</button>
+
+    </form> <!-- end #signup -->
+  
+  </fieldset> <!-- end .half-page-forn -->  
+  
+</template>

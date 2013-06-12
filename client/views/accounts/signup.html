@@ -1,0 +1,63 @@
+<template name="signup">
+
+  <fieldset class="half-page-form">
+      
+    <form id="signup" action="#">
+      
+      <div class="form-row">
+        <div class="fieldset short">
+          <label for="first-name">First Name</label>
+          <input type="text" name="firstName" class="required" placeholder="Joe">
+        </div>
+        <div class="fieldset short">
+          <label for="last-name">Last Name</label>
+          <input type="text" name="lastName" class="required" placeholder="Smith">
+        </div>
+      </div> <!-- end .form-row -->
+  
+      <div class="form-row">
+        <div class="fieldset long">
+          <label for="email-address">Email Address</label>
+          <input type="text" name="emailAddress" class="required email unique" placeholder="joe@smith.com">
+        </div>
+      </div> <!-- end .form-row -->    
+
+      <div class="form-row">
+        <div class="fieldset long">
+          <label for="password">Password</label>
+          <input type="password" name="password" class="required" placeholder="At least six (6) characters">
+        </div>
+      </div> <!-- end .form-row -->      
+
+      <div class="form-row">
+        <div class="fieldset long">
+          <label for="language">Language (for date and time formatting)</label>
+          <select name="language">
+            <option value="Select a language...">Select a language...</option>
+            <option value="zh-CN">Chinese (Simplified)</option>
+            <option value="zh-TW">Chinese (Traditional)</option>
+            <option value="nl">Dutch (Nederlands)</option>
+            <option value="en-usa" selected="selected">English (US)</option>
+            <option value="en-GB">English (UK)</option>
+            <option value="en-AI">English (AU)</option>
+            <option value="en-NZ">English (NZ)</option>
+            <option value="fr">French</option>
+            <option value="de">German</option>
+            <option value="it">Italian</option>
+            <option value="ja">Japanese</option>
+            <option value="pt">Portugese</option>
+            <option value="ru">Russian</option>
+            <option value="es">Spanish</option>
+            <option value="sv">Swedish</option>
+          </select>
+        </div>
+      </div> <!-- end .form-row -->      
+            
+      <button type="submit" class="btn black">Signup for What When</button>
+      <p class="small text-center dim" style="margin-top: 10px;">By clicking this, you agree to the <a href="{{termsPath}}" target="_blank">Terms of Service</a> and <a href="https://www.iubenda.com/en/privacy-policy/983656">Privacy Policy</a>.</p>
+
+    </form> <!-- end #signup -->
+  
+  </fieldset> <!-- end .half-page-forn -->
+  
+</template>

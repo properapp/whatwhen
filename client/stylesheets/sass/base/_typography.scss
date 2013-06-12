@@ -1,0 +1,43 @@
+$primary-stack: Georgia, Times, "Times New Roman", serif;
+$secondary-stack: Helvetica Neue, Helvetica, Arial, Sans-serif;
+
+body {
+  font-family: $primary-stack;
+  font-size: 18px;
+  line-height: 29px;
+}
+
+/* Thanks, Tim Brown. http://modularscale.com/scale/?px1=16&px2=27&ra1=1.25&ra2=0 */
+
+h1 { font-size: 1.953em; }
+h2 { font-size: 1.688em; }
+h3 { font-size: 1.563em; }
+h4 { font-size: 1.35em; }
+h5 { font-size: 1.25em; }
+h6 { font-size: 1.08em; }
+
+em { font-style: italic; }
+
+strong { font-weight: bold; }
+
+a { color: $primary; }
+
+.small { 
+  font-size: 0.875em;
+}
+
+.dim {
+  color: $tertiary;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}

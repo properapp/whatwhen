@@ -1,0 +1,42 @@
+<template name="timelinesList">
+  
+  {{#if loadingTimelines}}
+    {{>loading}}
+  {{else}}
+    {{#if hasTimelines}}
+      <header class="page-header">
+        <h4 class="page-title">Here are your current timelines, {{currentUser.profile.firstName}}.</h4>
+        <a href="#" class="btn black page-action">Create a New Timeline</a>
+      </header>
+      <ul class="timelines-list index-list">
+        {{#each timelines}}
+          {{>timelineListItem}}
+        {{/each}}    
+      </ul>
+    {{else}}
+      <div class="blank-state">
+        <h3>You're plum out of timelines, {{currentUser.profile.firstName}}.</h3>
+        <p class="bs-subtitle">Have a new project? Get started now and create a timeline:</p>
+        <a href="#" class="btn black page-action">Create a New Timeline</a>
+      </div>
+    {{/if}}
+  {{/if}}
+
+</template>
+
+<template name="timelineListItem">
+
+  <li class="timeline-item index-item">
+    
+    <a class="item-link" href="{{timelineEditorPath this}}">
+    
+      <hgroup>
+        <h4 class="project-name primary-title">{{name}}</h4>
+        <h6 class="project-client secondary-title">{{for}}</h6>
+      </hgroup>
+    
+    </a> 
+    
+  </li> <!-- end .timeline-item -->  
+  
+</template>

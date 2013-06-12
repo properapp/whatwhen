@@ -1,0 +1,330 @@
+#timeline {
+  position: relative;
+  padding-bottom: 120px;
+  margin-bottom: 20px;
+  @include clearfix;
+  
+  .timeEntry_control {
+    display: none !important;
+  }
+  
+}
+
+.timeline-bar {
+  position: absolute;
+  width: 8px;
+  top: 0px;
+  bottom: 0px;
+  left: 50%;
+  margin-left: -8px;
+  background: #eee;
+  display: none;
+  
+  &.editor-view {
+    bottom: 0px;
+  }
+  
+  @include media(992px) {
+    display: block;
+  }
+  
+}
+
+.timeline-box {
+  position: absolute;
+  z-index: 500;
+  background: #fff;
+  text-align: center;
+  width: 190px;
+  height: 80px;
+  left: 50%;
+  margin-left: -95px;
+  
+  input {
+    max-width: 90%;
+    text-align: center;
+  }
+  
+  &.start-date {
+    top: 0px;
+    padding-bottom: 10px;
+    height: 85px;
+  }
+  
+  &.finish-date {
+    bottom: 0px;
+    padding-top: 15px;
+    
+  }
+  
+  .timeline-start-date, .timeline-finish-date {
+    @include box-shadow(0 0 0 transparent);
+    font-size: 1.1em;
+    line-height: 1.5em;
+    padding: 0px 0 0px;
+    margin-top: -4px;
+    border: 1px solid transparent;
+    color: #333;
+    
+    &:hover, &:focus {
+      border: 1px solid #ccc;
+      @include box-shadow(rgba(0,0,0,0.1) 0 1px 1px inset);
+      font-size: 0.875em;
+      padding: 8px 10px;
+      margin-top: 0px;
+      color: #000;
+    }
+  
+  }
+  
+} /* .timeline-box */
+
+#timeline-add-item {
+  width: 40%;
+  position: relative;
+  left: 50%;
+  top: 0px;
+  bottom: 0px;
+  padding:10px 0 5px;
+  margin: 30px 0 0px -215px;
+  background: #fff;
+  
+  .timeline-add-type {
+    width: 30%;
+    margin-bottom: 0px;
+    select { margin-bottom: 0px; }
+  }
+  
+  .timeline-add-title {
+    width: 46%;
+  }
+  
+  .timeline-add-date {
+    width: 26%;
+    
+    input { text-align: center; }
+    
+  }
+  .timeline-add-time {
+    width: 20%;
+    input { text-align: center; }    
+  }
+  
+  .timeline-add-description-row {
+    margin-bottom: 2px; 
+  }
+  
+}
+
+.timeline-items {
+  padding: 90px 0 0px;
+  @include clearfix;
+  
+  &.editor-view {
+    padding-bottom: 0px;
+
+    .past {
+      opacity: 0.5;
+      
+      &:hover {
+        opacity: 1.0;
+      }
+      
+    }
+    
+  }
+  
+  .timeline-item {
+    @include clearfix;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 500;
+    clear: both;
+    
+    &.past {
+      opacity: 0.5;
+      
+    }
+    
+    .ti-date-time-type {
+      border-bottom: 1px solid #eee;
+      @include clearfix;
+      padding-bottom: 6px;
+      
+    } /* .ti-date-time-type */
+    
+    .ti-date-time {
+      float: left;
+      
+      p { font-size: 0.875em; }
+      
+      .today-stamp {
+        background: yellow;
+        padding: 0 2px;
+      }
+      
+    }
+    
+    .ti-type {
+      float: right;
+      
+      &.payment-due { color: limegreen; }
+      
+      p  { 
+        text-transform: capitalize; 
+        font-size: 0.875em;
+      }
+      
+    } /* .ti-type */
+    
+    .ti-title {
+      margin-top: 5px;
+      font-size: 1em;
+    }
+    
+    .ti-description {
+      color: #555;
+      font-size: 0.875em;
+    }
+    
+    &:last-child { margin-bottom: 0px; }
+    
+    .ti-edit-delete {
+      position: absolute;      
+      top: 0px;
+      z-index: 500;
+      background: #fff;
+      padding: 3px 3px 0;
+      display: none;
+      
+      .edit-timeline-item {
+        color: #888;
+        border-right: 1px solid #ccc;
+        padding-right: 7px;
+        display: inline-block;
+        margin-top: -3px;
+        float: left;
+        
+        &:hover {
+          color: #333;
+        }
+        
+      }
+      
+      .delete-timeline-item {
+        color: #aaa;
+        margin: 6px 0 0 7px;
+        float: left;
+        padding: 0;
+        line-height: 1em;
+        
+        &:hover {
+          color: red;
+          cursor: pointer;
+        }
+        
+      }
+      
+    }
+    
+    &:hover {
+      .ti-edit-delete {
+        display: block;
+      }
+    }
+    
+    &.editing {
+      
+      .ti-date-time-edit {
+        float: left;
+        display: inline-block;
+        width: 70%;
+        
+        .datepicker-edit-item {
+          width: 40%;
+          margin-right: 5px;
+        }
+
+        .timepicker {
+          width: 30%;
+        }
+                
+      } /* .ti-date-time-edit */
+      
+      .ti-type-edit {
+        float: right;
+      }
+      
+      .ti-title-edit, .ti-description-edit {
+        width: 100%;
+        clear: both;
+      }
+      
+      .ti-title-edit {
+        margin: 10px 0;
+      }
+      
+    } /* .editing */
+    
+    @include media(992px) {
+      width: 50%;
+      margin-bottom: 0px;
+      
+      &:nth-child(odd) {
+        float: left;
+        padding-right: 95px;
+        
+        .ti-edit-delete {
+          right: 8px;
+          padding-left: 5px;
+          padding-right: 5px;
+        }
+        
+        &:after {
+          right: 0;
+        }
+        
+      }
+      
+      &:nth-child(even) {
+        float: right;
+        padding-left: 90px;
+
+        .ti-edit-delete {
+          left: 0px;
+          padding-right: 0px;
+          padding-left: 7px;
+        }
+                        
+        &:after {
+          left: 0;  
+        }
+        
+      }
+      
+      .ti-date-time-type {
+        padding-bottom: 9px;
+      }
+      
+      .ti-date-time p, .ti-type p, .ti-description {
+        font-size: 1em;
+      }
+
+      &:after {
+        content: "";
+        height: 8px;
+        width: 70px;
+        background: #eee;
+        top: 11px;
+        position: absolute;
+      }
+          
+    } /* @include media(768px) */
+    
+  } /* .timeline-item */
+  
+  @include media(992px) {
+    padding: 110px 0 0;  
+  }
+  
+} /* .timeline-items */

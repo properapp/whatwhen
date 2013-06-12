@@ -1,0 +1,99 @@
+.modal-overlay {
+  background: rgba(0,0,0,0.8);
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 5000;
+  display: none;
+  
+  &.active {
+    display: block;
+  }
+  
+}
+
+.modal {
+  background: #fff;
+  position: absolute;
+  width: 600px;
+  left: 50%;
+  margin-left: -300px;
+  top: 25%;
+  @include border-radius(3px);
+}
+
+.modal-header {
+  padding: 10px 15px;
+  border-bottom: 1px solid #ccc;
+  position: relative;
+  
+  .close-modal {
+    position: absolute;
+    right: 15px;
+    top: 13px;
+    opacity: 0.5;
+    
+    i { font-size: 1.25em; }
+    
+    &:hover {
+      cursor: pointer;
+      opacity: 1.0;
+    }
+    
+  }
+  
+} /* .modal-header */
+
+/* === Modal Forms === */
+
+.field-wrap {
+  padding: 15px;
+  border-bottom: 1px solid #ccc;
+  
+  label { display: block; }
+  
+  input[type="text"], input[type="email"], input[type="password"], select, textarea {
+    width: 100%;
+  }
+  
+  .inline-trigger {
+    font-size: 0.85em;
+    margin-top: 5px;
+    
+    a { color: #000; }
+    
+  }
+   
+}
+
+/* 
+  
+  If add new client has a value, ignore value of "Select a Client". Add new client, and create project.
+  
+  If add new client DOES NOT have a value, ignore value, and check Select a Client. Add with existing client, and create project.
+  
+  If neither has a value, throw an error.
+
+*/
+
+/* === Individual Modals === */
+
+// Start a New Project
+
+#start-project-client.hidden {
+  display: none;
+} /* .new-client.inline-trigger */
+
+.new-client.inline-trigger.hidden {
+  display: none;
+}
+
+#start-project-new-client {
+  display: none;  
+}
+
+#start-project-new-client.visible {
+  display: block;
+}

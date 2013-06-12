@@ -1,0 +1,30 @@
+<template name="timelineEditor">
+    
+  {{#if loadingItems}}
+    {{>loading}}
+  {{else}}
+    {{>timelineSettings}}
+  
+    <div id="timeline">
+      {{> timelineStartFinish}}
+      <div class="timeline-bar {{#if notPublicView}}editor-view{{/if}}"></div>
+      {{> timelineItems}}
+      {{> timelineAdd}}
+    </div> <!-- end #timeline -->
+  {{/if}}
+  
+</template>
+
+<template name="timelineStartFinish">
+  
+  <div class="timeline-box start-date text-center">
+    <label for="timeline-start-date">Start Date</label>
+    <input type="text" name="timeline-start-date" class="timeline-start-date datepicker-start" value="{{timeline.startDate}}" placeholder="Add Start Date"> 
+  </div> <!-- end .start-date -->
+
+  <div class="timeline-box finish-date text-center">
+    <label for="timeline-finish-date">Finish Date</label>
+    <input type="text" name="timeline-finish-date"  class="timeline-finish-date datepicker-finish"  value="{{timeline.finishDate}}" placeholder="Add Finish Date">
+  </div> <!-- end .start-date -->  
+
+</template>

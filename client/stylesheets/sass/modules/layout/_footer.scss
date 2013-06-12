@@ -1,0 +1,48 @@
+#footer {
+  @include clearfix;
+  border-top: 1px solid #ccc;
+  padding: 20px 0;
+  
+  p { color: #aaa; a {color: #aaa;} }
+  
+  .copyright { float: left; }
+  
+  .mp-partner {
+    float: right;
+  }
+  
+  .nav-share {
+    float: right;
+    
+    ul {
+      float: right;
+      margin-right: 20px;
+      padding-right: 20px;
+      border-right: 1px solid #ccc;
+    }
+    
+    .share-it {
+      float: right;
+      margin-top: 3px;
+      
+      .twitter-share-button {
+        width: 90px !important;
+      }
+      
+    }
+    
+    ul li {
+      float: left;
+      margin-left: 20px;
+      
+      &.active a {
+        text-decoration: underline;
+      }
+      
+      a { text-decoration: none; }
+      
+    }
+    
+  } /* .nav-share */
+  
+} /* #footer */

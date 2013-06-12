@@ -1,0 +1,133 @@
+.index-item {
+  border-bottom: 1px solid #ccc;
+  position: relative;
+  @include clearfix;
+  
+  a.item-link { 
+    display: block; 
+    @include clearfix;
+    text-decoration: none;
+    padding: 20px 0;
+    position: relative;
+    z-index: 300;
+  
+    &:hover {
+      
+      .primary-title { text-decoration: underline; }
+      
+    } /* &:hover */
+  
+  } /* .item-link */
+  
+  .primary-title {
+    color: $primary;
+  }
+  
+  .secondary-title { 
+    margin-top: 5px;
+    color: $tertiary; 
+  }
+  
+  .primary-title, .secondary-title {
+    text-decoration: none;
+  }
+  
+  .secondary-items-list {
+    margin-top: 5px;
+    
+    li { 
+      float: left; 
+      color: #888;
+      
+      &:after { 
+        content: "|";
+        margin: 0 10px;
+      }
+      
+      &:last-child {
+        
+        &:after { display: none; }
+        
+      }
+      
+    } /* li */
+    
+  } /* .secondary-items-list */
+  
+  .manage-item {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    margin-top: -12px;
+    padding-left: 50px;
+    z-index: 5000;
+    padding: 0;
+    
+    a { 
+      color: $tertiary; 
+      text-decoration: none;
+      font-size: 1.25em;
+      
+      &:hover { color: $primary; }
+      
+    }
+    
+  } /* .manage-item */
+  
+} /* .index-item */
+
+.project-header {
+  margin-bottom: 50px;
+  @include clearfix;
+  
+  hgroup { float: left; }
+  
+  h4 { margin-bottom: 5px; }
+  
+  h5 { color: #555; }
+  
+  .options-list {
+    float: right;
+    position: relative;
+          
+    li {  
+      float: left; 
+      margin-left: 10px;
+    }
+    
+    li.split {
+      
+      &:before {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 1px;
+        background: lighten($tertiary, 40%);
+        margin: 0 20px;
+      }
+      
+    }
+    
+  } /* .options-list */
+  
+  .single-action {
+    float: right;
+    
+    .btn { width: auto; }
+    
+    p { text-align: center; margin-top: 5px; }
+     
+  }
+  
+} /* .project-header */
+
+.document-tabs {
+  margin-bottom: 30px;
+  
+  .documents-tab, .team-tab, .settings-tab { float: right; }
+  
+}
+
+.editor-block {
+  margin-bottom: 20px;
+}

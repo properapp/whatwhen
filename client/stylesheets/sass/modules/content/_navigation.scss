@@ -1,0 +1,24 @@
+.horizontal-navigation {
+  
+  li { 
+    float: left;
+    margin-left: 20px;
+    
+    &:first-child {
+      margin-left: 0px;
+    }
+    
+  }
+  
+  li a {
+    text-decoration: none;
+    
+    &:hover { text-decoration: underline; }
+    
+  }
+  
+  li.active a {
+    text-decoration: underline;
+  }
+  
+} /* .horizontal-navigation */

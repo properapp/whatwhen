@@ -1,0 +1,17 @@
+<template name="navigation">
+  
+  <nav id="navigation">
+    <ul class="user-nav horizontal-navigation">
+      {{#if userExists}}
+      <li class="{{activeLink 'timelinesList'}} {{activeLink 'timelineEditor'}}"><a href="{{timelinesListPath}}">Timelines</a></li>
+      <li class="{{activeLink 'help'}}"><a href="{{helpPath}}">Help</a></li>
+      <li class="{{activeLink 'donate'}}"><a href="{{donatePath}}">Dig it?</a></li>
+      {{else}}
+      <li class="{{activeLink 'home'}}"><a href="{{homePath}}">What is this?</a></li>
+      <li class="{{activeLink 'help'}}"><a href="{{helpPath}}">Help</a></li>
+      <li class="{{activeLink 'donate'}}"><a href="{{donatePath}}">Dig it?</a></li>
+      {{/if}}
+    </ul> 
+  </nav> <!-- end #navigation -->
+  
+</template>

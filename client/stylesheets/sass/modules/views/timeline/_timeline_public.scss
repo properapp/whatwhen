@@ -1,0 +1,92 @@
+.timeline-header {
+  margin-bottom: 5px;
+  @include clearfix;
+  text-align: center;
+  padding-bottom: 20px;
+  
+  h4 { 
+    margin-bottom: 0px; 
+    font-size: 1.1em; 
+  }
+  
+  h5 { 
+    color: #555; 
+    font-size: 1em;
+  }
+  
+  .options-list {
+    float: right;
+    position: relative;
+          
+    li {  
+      float: left; 
+      margin-left: 10px;
+    }
+    
+    li.split {
+      
+      &:before {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 1px;
+        background: lighten($tertiary, 40%);
+        margin: 0 20px;
+      }
+      
+    }
+    
+  } /* .options-list */
+  
+  .single-action {
+    float: right;
+    
+    .btn { width: auto; }
+    
+    p { text-align: center; margin-top: 5px; }
+     
+  }
+  
+  @include media(992px) {
+    margin-bottom: 15px;
+    padding-top: 15px;
+    
+    h4 { 
+      font-size: 1.4em; 
+      margin-bottom: 5px;
+    }
+    
+    h5 { font-size: 1.2em; }
+    
+  }
+  
+} /* .timeline-header */
+
+.start-finish-date {
+  position: absolute;
+  width: 100%;
+  background: #fff;
+  z-index: 500;
+  text-align: center;
+  
+  p {
+    color: #888;
+  }
+  
+  h6 {
+    color: #444;
+  }
+  
+  &.start-date {
+    padding-bottom: 15px;
+    top: 0px;
+    border-bottom: 1px solid #eee;
+  }
+  
+  &.finish-date {
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+    bottom: 0px;
+  }
+  
+}

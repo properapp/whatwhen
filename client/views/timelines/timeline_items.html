@@ -1,0 +1,18 @@
+<template name="timelineItems">
+  
+  {{#if notBlank}}
+  <ul class="timeline-items {{#if notPublicView}}editor-view{{/if}}">
+    
+    {{#each timelineItem}}
+      {{> timelineItem}}
+    {{/each}}
+    
+  </ul> <!-- end .timeline-items -->
+  {{else}}
+    <div class="blank-state timeline">
+      <h2>Endless projects are no good.</h2>
+      <p class="bs-subtitle">Add some items to the Timeline below to stay on track. Don't forget to add a start (top) date and a finish (bottom) date, too.</p>
+    </div>
+  {{/if}}
+  
+</template>

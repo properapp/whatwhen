@@ -1,0 +1,35 @@
+.blank-state {
+  text-align: center;
+  margin: 100px 0;
+  position: relative;
+  
+  .bs-subtitle {
+    color: #555;
+    margin: 10px 0 20px;
+  }
+  
+  .page-action { display: inline-block; }
+  
+  &.timeline {
+    background: #fff;
+    padding: 15px 0;
+    margin: 140px 0 50px;
+    
+    .bs-subtitle {
+      max-width: 50%;
+      margin: 10px auto 0;
+    }
+    
+  }
+  
+  &.compact {
+    margin: 40px 0;
+  }
+  
+}
+
+.loading {
+  background: url('/img/loading.gif') no-repeat;
+  width: 128px;
+  height: 15px;
+}

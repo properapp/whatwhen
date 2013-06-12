@@ -1,0 +1,56 @@
+<template name="timelineItem">
+  
+  {{#if editing}}
+    <li class="timeline-item editing {{hasDescription}} {{#if isPassed}}past{{/if}}">
+      <form id="edit-timeline-item" action="#">
+        <div class="ti-timeline-date-type">
+          <div class="ti-date-time-edit">
+            <input type="hidden" class="timeline-edit-epoch" value="{{epoch}}">
+            <input type="text" name="ti-date-edit" class="datepicker-edit-item text-center" value="{{date}}" placeholder="Date">
+            <input type="text" name="ti-time-edit" class="timepicker text-center" value="{{time}}" placeholder="Time">
+          </div>
+          <div class="ti-type-edit {{type}}">
+            <select name="ti-type-edit" value="{{type}}">
+              <option value="Select type...">Select type...</option>
+              <optgroup label="Nothing Specific">
+                <option value=" ">No Type</option>
+              </optgroup>
+              <optgroup label="More Specific">
+                <option value="client-task">Client Task</option>
+                <option value="meeting">Meeting</option>
+                <option value="milestone">Milestone</option>
+                <option value="misc">Miscellaneous</option>    
+                <option value="payment-due">Payment Due</option>       
+                <option value="work-day">Work Day</option>   
+              </optgroup>
+            </select>
+          </div>
+        </div>
+        <input type="text" name="ti-title-edit" class="ti-title-edit" value="{{title}}" placeholder="Title"> <br>
+        <textarea name="ti-description-edit" class="ti-description-edit" placeholder="Add a description (optional)...">{{description}}</textarea>
+        {{#if notPublicView}}
+        <div class="ti-save-cancel-edit">
+          <button type="submit" href="#" class="save-timeline-item btn black inline">Save</button>
+          <a href="#" class="dim cancel-edit-timeline-item">Cancel</a>
+        </div>
+        {{/if}}
+      </form>
+    </li> <!-- end .timeline-item -->
+  {{else}}
+    <li class="timeline-item {{hasDescription}} {{#if notPublicView}}editor-view{{/if}} {{#if isPassed}}past{{/if}}" data-item-epoch="{{epoch}}">
+      <div class="ti-date-time-type">
+        {{#if notPublicView}}
+        <div class="ti-edit-delete">
+          <a href="#" class="edit-timeline-item">Edit</a>
+          <i class="delete-timeline-item ss-icon ss-delete"></i>
+        </div>
+        {{/if}}
+        <div class="ti-date-time"><p>{{#if isToday}} <span class="today-stamp">Today</span> {{else}} {{date}} {{/if}} {{#if time}}@ {{time}}{{/if}}</p></div>
+        <div class="ti-type {{type}}"><p>{{itemType}}</p></div>
+      </div>
+      <h6 class="ti-title">{{title}}</h6>
+      <p class="ti-description">{{description}}</p>
+    </li> <!-- end .timeline-item -->
+  {{/if}}
+  
+</template>

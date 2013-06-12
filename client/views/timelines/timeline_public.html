@@ -1,0 +1,48 @@
+<template name="timelinePublic">
+
+  {{#if loadingItems}}
+    {{>loading}}
+  {{else}}
+  
+    <header class="timeline-header">
+      <hgroup>
+        <h4>{{timeline.name}}</h4>
+        <h5>{{timeline.for}}</h5>
+      </hgroup>
+    </header>
+  
+    {{#if timelineHasItems}}
+      <div id="timeline">
+        <div class="start-date start-finish-date">
+          <p>Project Starts</p>
+          {{#if timeline.startDate}}
+            <h6>{{timeline.startDate}}</h6>
+          {{else}}
+            <h6>???</h6>
+          {{/if}}
+        </div> <!-- end .start-finish-date -->
+        <div class="timeline-bar"></div>
+        <ul class="timeline-items">
+          {{#each timelineItems}}
+            {{>timelineItem}}
+          {{/each}}
+        </ul> <!-- end .timeline-items -->
+        <div class="finish-date start-finish-date">
+          <p>Project Finishes</p>
+          {{#if timeline.finishDate}}
+            <h6>{{timeline.finishDate}}</h6>
+          {{else}}
+            <h6>???</h6>
+          {{/if}}
+        </div> <!-- end .start-finish-date -->
+      </div> <!-- end #timeline -->
+      {{else}}
+        <div class="blank-state">
+          <h3>No items have been added to this timeline yet.</h3>
+          <p class="bs-subtitle">Bummer, right? Hang in there. Should be something soon.</p>
+        </div>
+    {{/if}}
+      
+  {{/if}}
+  
+</template>

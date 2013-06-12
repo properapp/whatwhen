@@ -1,0 +1,12 @@
+<template name="header">
+  
+  {{#if notPublicView}}
+    <header id="header">
+      <h2 class="brand"><a href="{{#if user}}/timelines{{else}}/{{/if}}">WhatWhen</a></h2>  
+      <p class="tagline">Tidy timelines for freelancers.</p>
+      {{>account}}
+      {{>navigation}}
+    </header>
+  {{/if}}
+  
+</template>

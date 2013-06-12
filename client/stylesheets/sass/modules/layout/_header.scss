@@ -1,0 +1,142 @@
+#header {
+  border-bottom: 1px solid lighten($tertiary, 40%);
+  padding: 30px 0 0;
+  @include clearfix;
+  
+  .brand { 
+    float: left; 
+  }
+  
+  .brand a {
+    color: $secondary;
+    text-decoration: none;
+    position: relative;
+  } /* .brand a */
+  
+  .tagline {
+    float: left;
+    margin: 4px 0 0 20px;
+    color: #888;
+    font-size: 0.875em;
+  }
+  
+  .account {
+    float: right;
+    margin-left: 20px;
+    border-left: none;
+    position: relative;
+    
+    &:before {
+      content: "";
+      position: absolute;
+      width: 1px;
+      height: 30px;
+      background: #ccc;
+      left: 0;
+    }
+    
+    a { 
+      color: #000; 
+      text-decoration: none;
+      
+      &:hover {
+        text-decoration: underline;
+      }
+      
+    } /* a */
+    
+    .login-signup {
+      padding: 0 0 30px 20px;
+      @include clearfix;
+      
+      li { float: left; }
+      
+      .active a {
+        text-decoration: underline;
+      }
+      
+      span { float: left; margin: 0 9px; }
+
+    }
+    
+    .user-link {
+      display: inline-block;
+      padding: 33px 0 33px 20px;
+      margin-top: -40px;
+    }
+    
+    .user-account-menu {
+      display: none;
+      position: absolute;
+      right: 100%;
+      margin-right: 0px;
+      top: -32px;
+      width: 300px;
+      background: #fff;
+      z-index: 1000;
+      padding: 33px 20px 32px 0;
+      text-align: right;
+      
+      li { 
+        float: right; 
+        margin-left: 20px;
+       
+        &.active {
+          a { text-decoration: underline; }
+        }
+        
+      }
+      
+    } /* .user-account-menu */
+    
+    &:hover {
+      
+      .user-account-menu { display: block; }
+      
+    }
+    
+  } /* .account */
+  
+  #navigation {
+    float: right;
+    
+    ul li {
+      float: left;
+      margin-left: 20px;
+      
+      a {
+        color: $secondary;  
+        text-decoration: none;
+        
+        &:hover { text-decoration: underline; }
+        
+      } /* a */
+      
+      &:last-child { margin-right: 0px; }
+      
+    } /* ul li */
+    
+    .active a {
+      text-decoration: underline;
+      
+      &:hover { text-decoration: underline; }
+    }
+    
+  } /* #navigation */
+   
+} /* #header */
+
+.not-user {
+  background: #fee99b;
+  padding: 5px 0;
+  
+  p {
+    font-size: 0.875em;
+    text-align: center;
+    color: #453f26;
+    
+    a { color: #453f26; }
+    
+  }
+  
+}

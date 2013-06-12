@@ -1,0 +1,106 @@
+.modal-overlay {
+  background: rgba(0,0,0,0.8);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10000;
+}
+
+.modal {
+  background: #fff;
+  @include border-radius(3px);
+  width: 600px;
+  position: absolute;
+  left: 50%;
+  margin-left: -300px;
+  top: 15%;
+  
+  .modal-header {
+    padding: 10px 15px 8px;
+    border-bottom: 1px solid #eee;
+    @include border-radius(3px);
+    @include clearfix;
+    
+    h6 {
+      color: #333;
+      float: left;
+      margin-top: 5px;
+    }
+    
+    .close-modal {
+      float: right;
+      margin-top: 8px;
+      
+      i { 
+        font-size: 1.25em; 
+        color: #888;
+      }
+      
+      &:hover {
+      
+        i { 
+          color: #333; 
+          cursor: pointer;
+        }
+        
+      } /* &:hover */
+      
+    } /* .close-modal */
+    
+  } /* .modal-header */
+  
+  .modal-body {
+    padding: 10px 15px;
+  }
+  
+}
+
+.email-modal {
+
+  #send-timeline-recipients {
+    @include clearfix;
+  }
+  
+  .recipient-first-name {
+    float: left;
+    width: 20%;
+    margin-right: 2.5%;
+  }
+  
+  .recipient-email {
+    float: left;
+    width: 50%;
+    margin-right: 2.5%;
+  }
+  
+  .add-recipient {
+    float: left;
+    width: 25%;
+  }
+  
+  .recipients-list {
+    border-top: 1px solid #eee;
+    padding-top: 10px;
+    margin-top: 10px;
+    @include clearfix;
+    
+    .btn {
+      margin-top: 12px;
+    }
+    
+  }
+  
+  table td {
+    color: #555;
+    padding: 7px 0 5px;
+  }
+  
+  table td .ss-delete {
+    font-size: 1.1em;
+    padding-top: 8px;
+    display: inline-block;
+  }
+  
+} /* .email-body */

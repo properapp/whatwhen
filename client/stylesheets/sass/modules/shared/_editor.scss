@@ -1,0 +1,62 @@
+.editor-block {
+  
+  &#edit-contract, &#edit-scope, &#edit-timeline, &#edit-costs, &#edit-team {
+   display: none; 
+  }
+  
+  .runner {
+    @include clearfix;
+    margin-bottom: 30px;
+    padding: 15px 0px;
+    border-top: 1px solid lighten($tertiary, 40%);
+    border-bottom: 1px solid lighten($tertiary, 40%);
+    
+    .runner-block {
+      
+      label { display: none; }
+      
+      input, select { width: 100%; }
+      
+      select {
+        margin-top: 13px;
+        display: block;
+        white-space: none;
+      }
+      
+      &.left {
+        float: left;
+      }
+      
+      &.short {
+        width: 15%;
+        margin-right: 2%;
+      }
+      
+      &.medium {
+        width: 47%;
+        margin-right: 2%;
+      }
+      
+      &.end { 
+        float: right; 
+        
+        .btn { margin-top: 2px; }
+        
+        a {
+          float: left;
+        }
+        
+        .cancel-add-item {
+          margin: 7px 0 0 15px;
+          color: lighten($tertiary, 10%);
+        }
+        
+      }
+      
+    } /* .runner-block */
+    
+  } /* .runner */
+  
+} /* .editor-block */
+
+

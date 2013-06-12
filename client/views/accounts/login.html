@@ -1,0 +1,30 @@
+<template name="login">
+
+  <fieldset class="half-page-form">
+      
+    <form id="login" action="#">
+
+      <div class="form-row">
+        <div class="fieldset long">
+          <label for="email-address">Email Address</label>
+          <input type="text" name="emailAddress" placeholder="joe@smith.com">
+        </div>
+      </div> <!-- end .form-row -->    
+
+      <div class="form-row">
+        <div class="fieldset long">
+          <label for="password">
+            <span style="float: left; display: inline-block; padding-bottom: 3px;">Password</span>
+            <a href="/reset" class="dim" style="display: inline-block; float: right;">Forget your password?</a>
+          </label>
+          <input type="password" name="password" placeholder="Something Secret">
+        </div>
+      </div> <!-- end .form-row -->      
+      
+      <button type="submit" class="btn black">Login to What When</button>
+
+    </form> <!-- end #signup -->
+  
+  </fieldset> <!-- end .half-page-forn -->
+  
+</template>

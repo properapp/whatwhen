@@ -1,0 +1,37 @@
+* { 
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  @include box-sizing;
+}
+
+html, body {
+  height: 100%;
+}
+   
+html {
+ -webkit-text-size-adjust: none;
+}
+   
+body { 
+  background: #ffffff;
+  font-size: 18px; 
+  font-family: $primary-stack;
+  overflow-x: hidden;
+    
+  @include dpr(2) { font-size: 18px; }
+  
+}
+
+.wrapper {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto 70px;
+}
+
+#footer, .push {
+  height: 70px;
+}
+
+#footer {
+  margin-top: -140px;
+}

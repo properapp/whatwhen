@@ -1,0 +1,106 @@
+#masthead {
+  text-align: center;
+  margin-top: 20px;
+  
+  h1 { margin-bottom: 10px; }
+  
+  h4 { color: #666; }
+  
+}
+
+.create-wrap {
+  margin-top: 70px;
+  text-align: center;
+}
+
+.create {
+  display: inline-block;
+  
+  .create-one, .example {
+    float: left;
+    margin: 0;
+    padding: 20px 0;
+  }
+  
+  .create-one {
+    margin-right: 30px;
+  }
+  
+  .example {
+    padding: 20px 0;
+    padding-left: 30px;
+    border-left: 1px solid #ccc;
+  }
+  
+  .btn {
+    margin-bottom: 5px;
+  }
+  
+}
+ 
+.what-do {
+  clear: both;
+  margin-top: 40px;
+}
+
+.the-jobs {
+  @include clearfix;
+  
+  li {
+    float: left;
+    width: 46%;
+    margin-right: 8%;
+    margin-bottom: 30px;
+    
+    &:nth-child(2n) {
+      margin-right: 0;
+    }
+    
+    &:nth-last-child(-n+2) {
+      margin-bottom: 0px;
+    }
+    
+    h6 { margin-bottom: 10px; }
+    
+    p {
+      font-size: 0.875em;
+      color: #555;
+    }
+    
+  }
+  
+}
+
+.final-cta {
+  margin: 50px 0 0;
+  border-top: 1px solid #eee;
+  padding: 30px 0 0;
+  clear: both;  
+  @include clearfix;
+  
+  p { float: left; margin-top: 5px; }
+  
+  .btn {
+    float: right;
+  }
+  
+}
+
+.proper {
+  clear: both;
+  background: #000;
+  padding: 20px; 
+  @include clearfix;
+  @include border-radius(3px);
+  
+  p {
+    float: left;
+    color: #fff;
+    margin-top: 6px;
+  }
+  
+  .btn {
+    float: right;
+  }
+  
+}

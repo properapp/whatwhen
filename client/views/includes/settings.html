@@ -1,0 +1,104 @@
+<template name="accountSettings">
+
+  <header class="page-header">
+    <h4 class="page-title">Account Settings</h4>
+    <a href="#" class="btn black delete inline page-action">Delete Account</a>
+  </header>
+
+  <fieldset class="half-page-form">
+      
+    <form id="settings-profile">
+      
+      <div class="form-row">
+        <div class="fieldset short">
+          <label for="first-name">First Name</label>
+          <input type="text" name="settingsFirstName" class="settingsFirstName required" placeholder="Joe" value="{{currentUser.profile.firstName}}">
+        </div>
+        <div class="fieldset short">
+          <label for="last-name">Last Name</label>
+          <input type="text" name="settingsLastName" class="settingsLastName required" placeholder="Smith" value="{{currentUser.profile.lastName}}">
+        </div>
+      </div> <!-- end .form-row -->
+  
+      <div class="form-row">
+        <div class="fieldset long">
+          <label for="email-address">Email Address</label>
+          <input type="text" name="settingsEmailAddress" class="settingsEmail required email" placeholder="joe@smith.com" value="{{emailAddress}}">
+        </div>
+      </div> <!-- end .form-row -->    
+
+      <div class="form-row">
+        <div class="fieldset long">
+          <label for="settingsLanguage">Language (for date and time formatting)</label>
+          <select name="settingsLanguage" class="settingsLanguage" value="{{currentUser.profile.language}}">
+            <option value="Select a language...">Select a language...</option>
+            <option value="zh-CN">Chinese (Simplified)</option>
+            <option value="zh-TW">Chinese (Traditional)</option>
+            <option value="nl">Dutch (Nederlands)</option>
+            <option value="en-usa">English (US)</option>
+            <option value="en-GB">English (UK)</option>
+            <option value="en-AI">English (AU)</option>
+            <option value="en-NZ">English (NZ)</option>
+            <option value="fr">French</option>
+            <option value="de">German</option>
+            <option value="it">Italian</option>
+            <option value="ja">Japanese</option>
+            <option value="pt">Portugese</option>
+            <option value="ru">Russian</option>
+            <option value="es">Spanish</option>
+            <option value="sv">Swedish</option>
+          </select>
+        </div>
+      </div> <!-- end .form-row -->          
+
+      <button type="submit" class="btn black">Update Profile</button>
+
+    </form> <!-- end #signup -->
+
+    <div class="blank-state compact profile-update-failed" style="display: none;">
+      <h3>Update failed.</h3>
+      <p class="bs-subtitle">Your changes did not save. Try again.</p>
+    </div>
+        
+    <div class="blank-state compact profile-updated" style="display: none;">
+      <h3>Profile Updated.</h3>
+      <p class="bs-subtitle">Your changes were saved successfully.</p>
+    </div>
+  
+  </fieldset> <!-- end .half-page-forn -->
+
+  <fieldset class="half-page-form">
+      
+    <form id="settings-password">
+      
+      <div class="form-row">
+        <div class="fieldset long">
+          <label for="password">Current Password</label>
+          <input type="text" name="currentPassword" class="currentPassword required" placeholder="Your current password.">
+        </div>
+      </div> <!-- end .form-row -->      
+
+      <div class="form-row">
+        <div class="fieldset long">
+          <label for="password">New Password</label>
+          <input type="text" name="newPassword" class="newPassword required" placeholder="Your (shiny) new password.">
+        </div>
+      </div> <!-- end .form-row -->      
+      
+      <button type="submit" class="btn black">Update Password</button>
+
+    </form> <!-- end #settings-password -->
+
+    <div class="blank-state compact password-failed" style="display: none;">
+      <h3>Update failed.</h3>
+      <p class="bs-subtitle">Your password didn't update. Try again.</p>
+    </div>    
+
+    <div class="blank-state compact password-updated" style="display: none;">
+      <h3>Password Updated.</h3>
+      <p class="bs-subtitle">Your changes were saved successfully.</p>
+    </div>
+          
+  </fieldset> <!-- end .half-page-forn -->
+    
+</template>

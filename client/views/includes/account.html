@@ -1,0 +1,21 @@
+<template name="account">
+      
+  <div class="account">
+  
+    {{#if currentUser}}
+      <a class="user-link" href="#">{{currentUser.profile.firstName}} {{currentUser.profile.lastName}}</a>
+      <ul class="user-account-menu">
+        <li><a class="logout-link" href="#">Logout</a></li>
+        <li class="{{activeLink 'settings'}}"><a href="{{settingsPath}}">Settings</a></li>
+      </ul>
+    {{else}}
+      <ul class="login-signup">
+        <li class="signup-link {{activeLink 'signup'}}"><a class="#" href="/signup">Signup</a></li>
+        <span>or</span> 
+        <li class="login-link {{activeLink 'login'}}"><a href="/login">Login</a></li>
+      </ul>  
+    {{/if}}
+    
+  </div> <!-- end .account -->
+  
+</template>

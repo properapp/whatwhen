@@ -1,0 +1,27 @@
+<template name="donate">
+  <div class="blank-state compact" style="float: left; width: 45%;">
+    <h3>Help WhatWhen do its thing.</h3>
+    <p class="bs-subtitle" style="max-width: 100%; margin: 15px auto 30px;">WhatWhen is 100% free to you, but it does take some cash to keep it humming. If you dig the product and want to keep it around, donations are always appreciated.</p>
+    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top" style="clear: both;">
+      <input type="hidden" name="cmd" value="_donations">
+      <input type="hidden" name="business" value="ryan@wellroundedgent.com">
+      <input type="hidden" name="lc" value="US">
+      <input type="hidden" name="item_name" value="WhatWhen - Tidy timelines for freelancers.">
+      <input type="hidden" name="no_note" value="0">
+      <input type="hidden" name="currency_code" value="USD">
+      <input type="hidden" name="bn" value="PP-DonationsBF:btn_donateCC_LG.gif:NonHostedGuest">
+      <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+      <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+    </form>
+  </div>
+    <div class="blank-state compact" style="width: 45%; float: right;">
+      <h3>Empty pockets?</h3>
+      <p class="bs-subtitle">Been there. But if you still want to help out, I'm also a fan of folks who can help get the word out.</p>
+    {{#constant}}
+      <div class="share-it">
+        {{>twitter}}
+        {{>facebook}}
+      </div>
+    {{/constant}}
+    </div>
+</template>

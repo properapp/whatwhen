@@ -1,0 +1,61 @@
+.plans {
+  
+  .plan { 
+    padding: 25px 0 35px;
+    border-bottom: 1px solid #ccc;
+    
+    h3 { 
+      margin-bottom: 10px; 
+      
+    } /* h3 */
+    
+    p { margin-bottom: 10px; }
+    
+    .btn { margin-top: 10px; }
+
+    .description { color: #333; }
+    
+    &:last-child {
+      padding-bottom: 0px;
+      border-bottom: none;
+    }
+    
+  } /* .plan */
+  
+}
+
+.about-trial {
+  margin-bottom: 40px;
+}
+
+.signup-account {
+  text-align: center;
+  
+  p {
+    display: inline-block;
+  }
+  
+  span {
+    float: left;
+    display: inline-block;
+  }
+  
+  .loader {  
+    background: url('../img/loader_black.gif');
+    width: 24px;
+    height: 24px;
+    display: none;
+  }
+  
+  .label {
+    margin: 4px 0 0 10px;
+  }
+  
+  &.processing {
+    background: #000;
+    
+    .loader { display: block; }
+    
+  }
+  
+}

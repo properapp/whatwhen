@@ -1,0 +1,64 @@
+<template name="timelineAdd">
+  
+  <div id="timeline-add-item">
+    
+    <div class="handle"></div>
+    
+    <form id="add-item" action="#">
+      
+      <div class="form-row timeline-add-type-row">
+        
+        <div class="fieldset timeline-add-type">
+          <select name="timelineType" class="required">
+            <option value="Select type...">Select type...</option>
+            <optgroup label="Nothing Specific">
+              <option value=" ">No Type</option>
+            </optgroup>
+            <optgroup label="More Specific">
+              <option value="client-task">Client Task</option>
+              <option value="meeting">Meeting</option>
+              <option value="milestone">Milestone</option>
+              <option value="misc">Miscellaneous</option>    
+              <option value="payment-due">Payment Due</option>       
+              <option value="work-day">Work Day</option>   
+            </optgroup>
+          </select>
+        </div> <!-- end .fieldset -->
+        
+      </div> <!-- end .form-row -->
+      
+      <div class="form-row">
+        
+        <input type="hidden" class="timeline-add-epoch" placeholder="Epoch Time">
+        
+        <div class="fieldset short timeline-add-title">
+          <input type="text" name="timelineTitle" class="required" placeholder="Title">  
+        </div> <!-- end .fieldset -->
+        
+        <div class="fieldset short timeline-add-date">
+          <input type="text" name="timelineDate" class="add-item-datepicker required" placeholder="Date">  
+        </div> <!-- end .fieldset -->        
+
+        <div class="fieldset short timeline-add-time">
+          <input type="text" name="timelineTime" class="timepicker" placeholder="Time">  
+        </div> <!-- end .fieldset -->              
+
+      </div> <!-- end .form-row -->
+      
+      <div class="form-row timeline-add-description-row">
+        <div class="fieldset timeline-add-description">
+          <textarea name="timelineDescription" placeholder="Add a description (optional)..."></textarea>
+        </div>
+      </div>
+      
+      <div class="form-row">
+        <div class="fieldset">
+          <button type="submit" class="btn black add-timeline-item">Add to Timeline</button>
+        </div>
+      </div>
+            
+    </form> <!-- end form -->
+    
+  </div> <!-- end #timeline-add-item -->
+  
+</template>

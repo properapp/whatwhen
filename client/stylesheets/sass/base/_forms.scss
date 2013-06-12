@@ -1,0 +1,160 @@
+label { 
+  display: block; 
+  margin-bottom: 5px; 
+  color: #555;
+  
+  i { padding: 2px 0 0 5px; }
+  
+}
+
+input[type="text"], input[type="email"], input[type="password"], textarea {
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  @include box-shadow(rgba(0,0,0,0.1) 0 1px 1px inset);
+  font-size: 0.875em;
+  line-height: 1.5em;
+  @include border-radius(3px);
+  resize: none;
+  font-family: Georgia;
+  
+  &:focus {
+    border: 1px solid #888;
+    outline: 0;
+  }
+  
+}
+
+select {
+  &:focus {
+    outline: 0;
+  }
+}
+
+.field-wrap {
+  
+  .error-message {
+    display: none;
+    margin-top: 5px;
+    font-size: 0.875em;
+    color: red;
+  }
+  
+  &.error {
+    
+    .error-message {
+      display: block;
+    }
+    
+  }
+  
+}
+
+.card-errors {
+  margin-bottom: 20px;
+  display: none; 
+  
+  .error-message {
+    font-size: 0.875em;
+    color: red;    
+    margin-bottom: 5px;
+    
+    &:last-child {
+      margin-bottom: 0px;
+    }
+    
+  }
+  
+}
+
+.form-row {
+  margin-bottom: 10px; 
+  @include clearfix; 
+  
+  .fieldset {
+  
+    input, select, textarea { width: 100%; }
+    
+    &.mini {
+      float: left;
+      width: 25%;
+      margin-right: 4%;
+    }
+    
+    &.short {
+      float: left;
+      width: 48%;
+      margin-right: 4%;
+      
+      &:last-child { margin-right: 0; }
+      
+    }
+    
+    &.long {
+      clear: both;
+      width: 100%;
+    }
+    
+    .field-hint {
+      color: #555;
+      font-size: 0.875em;
+    }
+    
+    .error {
+      color: red;
+      margin-bottom: 0px;
+    }
+    
+    input.error, select.error {
+      border: 1px solid red;
+    }
+
+    select.error {
+      margin-top: 0px !important;
+    }
+    
+    input.error {
+      margin-bottom: 2px;
+    }
+  
+  } /* .fieldset */
+  
+}
+
+.half-page-form {
+  width: 45%;
+  margin-bottom: 40px;
+  float: left;
+  clear: both;
+  
+  .form-message { margin-bottom: 30px; font-style: italic; }
+  
+  .btn {
+    margin-top: 30px;
+  }
+  
+}
+
+.form-helper {
+  float: right;
+  width: 40%;
+  
+  p {
+    margin-top: 10px;
+    font-size: 0.875em;
+  }
+  
+}
+
+.form-header {
+  margin-bottom: 20px;
+  p { 
+    margin-top: 5px;
+    font-size: 0.875em;
+  }
+  
+}
+
+.form-error {
+  color: red;
+  font-size: 0.875em;
+}
