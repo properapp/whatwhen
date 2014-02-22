@@ -1,6 +1,12 @@
 WhatWhen
 ========
 
+**HEADS UP:** I haven't had a lot of time to maintain this app/code base so a lot of stuff is out of date. It's highly recommended that if you find something arwy and you'd like to fix it, **shoot me a PR and I'll merge it in**. Also if you want to play around, just fork a copy and have fun! 
+
+**P.S.** If you're interested in helping me maintain this, shoot me an email and we can talk: ryan@properapp.com.
+
+- - -
+
 WhatWhen is an app for freelancers to help with managing project timelines. 
 
 It's built with [Meteor](http://meteor.com) and 100% free. Thought it may be helpful to share the source code for anyone looking to learn a bit more about the framework.
